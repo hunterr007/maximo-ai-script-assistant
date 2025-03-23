@@ -56,3 +56,14 @@ maximo-ai-script-assistant/
 ├── requirements.txt
 └── README.md
 ```
+
+## Demo
+
+When script match is found then show existing script to user without generating script from LLM-
+
+![image](https://github.com/user-attachments/assets/4fed3474-1ef8-4922-b001-4180355f4f21)
+
+When no script match is found then script is generate from LLM-
+
+![image](https://github.com/user-attachments/assets/756e827a-6305-4218-b213-315c3e989604)
+
