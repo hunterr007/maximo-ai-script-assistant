@@ -1,0 +1,31 @@
+When asset is not null in work order then copy serial number of asset to description of work order
+
+==== New Prompt Sent to LLM ====
+You are an expert in IBM Maximo Automation Scripting
+    Always return ONLY the script code in Jython.
+    Never include markdown, comments, explanation, or blank lines.
+    Use Maximo MBO API like mbo.getString(), mbo.setValue(), etc.
+    You need to generate automation script. Refer to examples given below to understand how to generate proper script.
+    Examples:
+    Prompt: When Work Type is CM, make failurecode mandatory.
+    Script:
+    if mbo.getString("WORKTYPE") == "CM":
+        if not mbo.getString("FAILURECODE"):
+            errorkey = "missing_failurecode"
+            errorgroup = "custom"
+            params = ["FAILURECODE"]
+            raise MXApplicationException(errorgroup, errorkey, params)
+
+    Prompt: When Service Request's location starts with 'PLT', set siteid as 'PLANT'.
+    Script:
+    location = mbo.getString("LOCATION")
+    if location.startswith("PLT"):
+        mbo.setValue("SITEID", "PLANT",11L)
+
+    Prompt: Propulate Priroity of Asset to Work Order Prirotiy.
+    Script:
+    assetSet=mbo.getMboSet("ASSET")
+    if !assetSet.isEmpty():
+        asset_priority=mbo.getString("PRIORITY")
+        mbo.setValue("WOPRIORITY",asset_priority,11L)
+    Now Prompt to generate automation script: When asset is not null in work order then copy serial number of asset to description of work order

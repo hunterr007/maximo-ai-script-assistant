@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Create WO from SR",
+    "launch_point_name": "CREATEWO_LP",
+    "launch_point_type": "Object",
+    "launch_point_object": "SR",
+    "description": "Create a Work Order from Service Request",
+    "script_code": "wo = mbo.getMboSet('WORKORDER').add()\nwo.setValue('DESCRIPTION', mbo.getString('DESCRIPTION'))"
+  },
+  {
+    "name": "Set SiteID from Location Prefix",
+    "launch_point_name": "SETSITEID_LP",
+    "launch_point_type": "Object",
+    "launch_point_object": "MXSR",
+    "description": "Sets siteid based on first 3 characters of location",
+    "script_code": "loc = mbo.getString('LOCATION')\nsiteid = loc[:3]\nmbo.setValue('SITEID', siteid)"
+  }
+]
