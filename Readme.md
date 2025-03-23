@@ -70,6 +70,12 @@ When no script match is found then script is generate from LLM-
 ## Execute
 
 ```
+cd maximo-ai-script-assistant
+python3 -m venv venv
+source venv/bin/activate
+
+pip install -r requirements.txt
+
 python embed_script.py
 streamlit run app/ui_app.py
 ```
