@@ -1,4 +1,4 @@
-# Maximo GenAI Script Assitant
+# Maximo GenAI Script Assistant
 
 ## Use Case
 User of this AI Assitsant is IBM Maximo System Administrator or Technical Developers.
