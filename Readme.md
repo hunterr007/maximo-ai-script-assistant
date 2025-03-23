@@ -67,3 +67,9 @@ When no script match is found then script is generate from LLM-
 
 ![image](https://github.com/user-attachments/assets/756e827a-6305-4218-b213-315c3e989604)
 
+## Execute
+
+```
+python embed_script.py
+streamlit run app/ui_app.py
+```
