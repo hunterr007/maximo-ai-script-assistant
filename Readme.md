@@ -32,6 +32,8 @@ Below diagram shows architectural components
                 | Show Script + Similarity UI |
                 +-----------------------------+
 ```
+![Uploading image.png…]()
+
 
 ## Tech Stack & Dependencies
 
