@@ -32,7 +32,8 @@ Below diagram shows architectural components
                 | Show Script + Similarity UI |
                 +-----------------------------+
 ```
-![Uploading image.png…]()
+
+<img width="914" alt="Screenshot by Snip My on Mar 24, 2025 at 9 41 56 AM" src="https://github.com/user-attachments/assets/7c7d3b16-7722-4a3f-bcb7-d330bbb3e3ca" />
 
 
 ## Tech Stack & Dependencies
