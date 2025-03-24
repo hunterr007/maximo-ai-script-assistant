@@ -9,32 +9,7 @@ b) If script is not available then AI Assitant will use LLM to generate Maximo A
 
 ## How it works
 
-Below diagram shows architectural components
-```
-+-------------------+         +------------------------+
-| User Prompt Input | ----->  | Sentence Transformer   |
-| (via Streamlit UI)|         | (Prompt Embedding)     |
-+-------------------+         +------------------------+
-                                       |
-                                       v
-                        +----------------------------+
-                        | FAISS Vector Search         |
-                        | (Find similar scripts)      |
-                        +----------------------------+
-                           | Match Found?   | No Match
-                          Yes               v
-                            |      +------------------------+
-                            |      | Mistal LLM in Ollama   |
-                            |      | Generate New Script    |
-                            |      +------------------------+
-                            v
-                +-----------------------------+
-                | Show Script + Similarity UI |
-                +-----------------------------+
-```
-
 <img width="914" alt="Screenshot by Snip My on Mar 24, 2025 at 9 41 56 AM" src="https://github.com/user-attachments/assets/7c7d3b16-7722-4a3f-bcb7-d330bbb3e3ca" />
-
 
 ## Tech Stack & Dependencies
 
